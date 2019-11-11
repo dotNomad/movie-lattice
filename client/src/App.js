@@ -8,7 +8,7 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="app">
         <Switch>
           <Route exact={true} path="/">
             <PopularMovies />
