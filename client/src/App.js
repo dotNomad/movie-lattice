@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
-import MovieGrid from './components/MovieGrid/MovieGrid';
+import PopularMovies from './components/PopularMovies/PopularMovies';
 
 import './App.css';
 
@@ -21,7 +21,7 @@ function App() {
           Learn React
         </a>
       </header>
-      <MovieGrid />
+      <PopularMovies />
     </div>
   );
 }

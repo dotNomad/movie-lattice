@@ -1,19 +1,21 @@
 import React from 'react';
 import MovieCard from '../MovieCard/MovieCard';
+import { movieDBImgSource } from '../../utils/Utils';
 
 import './MovieGrid.css';
 
 function MovieGrid(props) {
-    const posterPath = 'http://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg';
-
     return (
         <div className='movie-grid'>
-            <MovieCard posterPath={posterPath} />
-            <MovieCard />
-            <MovieCard />
-            <MovieCard />
-            <MovieCard />
-            <MovieCard />
+            {props.movies.map(movie => {
+                const posterPath = movieDBImgSource(movie['poster_path']);
+                return (
+                    <MovieCard 
+                        key={movie['original_title']}
+                        posterPath={posterPath}
+                    />
+                );
+            })}
         </div>
     );
 }
