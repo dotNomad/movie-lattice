@@ -3,11 +3,11 @@ import React from 'react';
 import './MovieCard.css';
 
 function MovieCard(props) {
-    const { posterPath } = props;
+    const { posterPath, title } = props;
 
     return (
         <div className='card-container'>
-            <img className='card' src={posterPath} />
+            <img className='card' src={posterPath} alt={title}/>
         </div>
     )
 }

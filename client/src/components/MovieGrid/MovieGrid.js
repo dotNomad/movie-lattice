@@ -8,10 +8,11 @@ function MovieGrid(props) {
     return (
         <div className='movie-grid'>
             {props.movies.map(movie => {
-                const posterPath = movieDBImgSource(movie['poster_path']);
+                const posterPath = movieDBImgSource(movie.poster_path);
                 return (
                     <MovieCard 
                         key={movie.id}
+                        title={movie.original_title}
                         posterPath={posterPath}
                     />
                 );
