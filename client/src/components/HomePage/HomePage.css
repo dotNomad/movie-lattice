@@ -1,0 +1,19 @@
+.search-bar {
+    margin: 15px 0;
+}
+
+.search-bar input {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.search-bar input[type=text] {
+    padding: 0 5px;
+    margin-right: 5px;
+}
+
+.search-bar input[type=submit] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}

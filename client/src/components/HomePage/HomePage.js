@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import MovieGrid from '../MovieGrid/MovieGrid';
 
+import './HomePage.css';
+
 class HomePage extends Component {
     constructor(props) {
         super(props);
@@ -38,12 +40,15 @@ class HomePage extends Component {
         return (
             <div className="App">
                 <h1>Movie Lattice</h1>
-                <form onSubmit={this.handleSubmit}>
-                    <label>
-                        Search:
-                        <input type="text" value={this.state.searchValue} onChange={this.handleChange} />
-                    </label>
-                    <input type="submit" value="Submit" />
+                <form onSubmit={this.handleSubmit} className="search-bar">
+                    <input
+                        aria-label="Movie Title"
+                        placeholder="Movie Title"
+                        type="text"
+                        value={this.state.searchValue}
+                        onChange={this.handleChange}
+                    />
+                    <input aria-label="Search" type="submit" value="Search" />
                 </form>
                 <MovieGrid movies={this.state.movies}/>
             </div>
