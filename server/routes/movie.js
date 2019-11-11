@@ -20,4 +20,12 @@ router.get('/:id', (req, res) => {
         .then(data => res.json(data));
 });
 
+router.get('/:id/credits', (req, res) => {
+    const { id } = req.params;
+    const uri = new URL(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=${apiKey}`);
+    fetch(uri)
+        .then(response => response.json())
+        .then(data => res.json(data));
+})
+
 module.exports = router;
