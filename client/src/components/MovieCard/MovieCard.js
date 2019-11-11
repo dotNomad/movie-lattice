@@ -3,11 +3,11 @@ import React from 'react';
 import './MovieCard.css';
 
 function MovieCard(props) {
-    const srcUri = 'http://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg';
+    const { posterPath } = props;
 
     return (
         <div className='card-container'>
-            <img className='card' src={srcUri} />
+            <img className='card' src={posterPath} />
         </div>
     )
 }
