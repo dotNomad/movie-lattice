@@ -8,6 +8,14 @@ A submission for the "Lattice Take Home Exercise" by Jordan Jensen.
 
 May work on earlier versions of Node, but was tested using the above version.
 
+## 3 Hour Mark
+
+If you would like to view what the project looked like at approximately 3 hours of work you can checkout the git commit at the time.
+
+```
+git checkout 595efe056319566ca99b71801e708ce2888468fa
+```
+
 ## Running the Project
 
 After cloning the repository we will need to run the server and the client.
