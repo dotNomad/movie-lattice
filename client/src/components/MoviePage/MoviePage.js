@@ -25,7 +25,8 @@ class MoviePage extends Component {
             original_title,
             overview,
             poster_path,
-            release_date
+            release_date,
+            vote_average
         } = this.state.data;
 
         return (
@@ -36,6 +37,7 @@ class MoviePage extends Component {
                 <div className="details">
                     <h1>Movie: {original_title}</h1>
                     <p>{overview}</p>
+                    <p>Score: {vote_average}/10</p>
                     <h3>Cast</h3>
                     <ul className="cast">
                         {cast.map(member => (
