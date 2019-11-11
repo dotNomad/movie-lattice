@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MovieGrid from '../MovieGrid/MovieGrid';
 
-class PopularMovies extends Component {
+class HomePage extends Component {
     constructor(props) {
         super(props);
         this.state = {movies: [], searchValue: ''};
@@ -51,4 +51,4 @@ class PopularMovies extends Component {
     }
 }
 
-export default PopularMovies;
+export default HomePage;
