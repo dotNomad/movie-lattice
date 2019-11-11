@@ -6,7 +6,7 @@ import './MoviePage.css';
 class MoviePage extends Component {
     constructor(props) {
         super(props);
-        this.state = { data: {} };
+        this.state = { cast: [], crew: [], data: {} };
     }
 
     componentDidMount() {
@@ -14,10 +14,13 @@ class MoviePage extends Component {
         fetch(`/movie/${id}`)
             .then(response => response.json())
             .then(data => this.setState({ data: data }));
+        fetch(`/movie/${id}/credits`)
+            .then(response => response.json())
+            .then(data => this.setState({ cast: data.cast, crew: data.crew }));
     }
 
     render() {
-        const { id } = this.props.match.params;
+        const { cast } = this.state;
         const {
             original_title,
             overview,
@@ -33,6 +36,12 @@ class MoviePage extends Component {
                 <div className="details">
                     <h1>Movie: {original_title}</h1>
                     <p>{overview}</p>
+                    <h3>Cast</h3>
+                    <ul className="cast">
+                        {cast.map(member => (
+                            <li><b>{member.name}</b> {member.character}</li>
+                        ))}
+                    </ul>
                     <p><i>Release Date: {release_date}</i></p>
                 </div>
             </div>
