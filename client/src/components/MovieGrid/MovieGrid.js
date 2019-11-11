@@ -11,6 +11,7 @@ function MovieGrid(props) {
                 const posterPath = movieDBImgSource(movie.poster_path);
                 return (
                     <MovieCard 
+                        id={movie.id}
                         key={movie.id}
                         title={movie.original_title}
                         posterPath={posterPath}

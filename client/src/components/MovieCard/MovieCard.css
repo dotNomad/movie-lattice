@@ -7,6 +7,7 @@
        when image is portrait calculated using: height / width / 2 */
     padding: 75% 0;
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.45);
+    cursor: pointer;
 }
   
 .card {
