@@ -13,9 +13,7 @@ function App() {
           <Route exact={true} path="/">
             <PopularMovies />
           </Route>
-          <Route path="/movie/:id">
-            <MoviePage />
-          </Route>
+          <Route path="/movie/:id" component={MoviePage} />
         </Switch>
       </div>
     </Router>
