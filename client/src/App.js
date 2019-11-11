@@ -6,7 +6,6 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <h1>Movie Lattice</h1>
       <PopularMovies />
     </div>
   );
