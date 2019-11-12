@@ -39,7 +39,6 @@ class HomePage extends Component {
     render() {
         return (
             <div className="App">
-                <h1>Movie Lattice</h1>
                 <form onSubmit={this.handleSubmit} className="search-bar">
                     <input
                         aria-label="Movie Title"
