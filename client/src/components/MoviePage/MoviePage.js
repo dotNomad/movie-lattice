@@ -32,9 +32,11 @@ class MoviePage extends Component {
 
         return (
             <div className="movie-container">
-                <div className="poster">
-                    <img src={movieDBImgSource(poster_path)} alt={original_title} />
-                </div>
+                {poster_path &&
+                    <div className="poster">
+                        <img src={movieDBImgSource(poster_path)} alt={original_title} />
+                    </div>
+                }
                 <div className="details">
                     <h1>{original_title}</h1>
                     <p>{overview}</p>
