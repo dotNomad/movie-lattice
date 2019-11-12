@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { movieDBImgSource } from '../../utils/Utils';
 
 import './MoviePage.css';
@@ -41,7 +42,9 @@ class MoviePage extends Component {
                     <h3>Cast</h3>
                     <ul className="cast">
                         {cast.map(member => (
-                            <li><b>{member.name}</b> {member.character}</li>
+                            <li>
+                                <Link to={location => `/person/${member.id}`}><b>{member.name}</b></Link> {member.character}
+                            </li>
                         ))}
                     </ul>
                     <p><i>Release Date: {release_date}</i></p>
