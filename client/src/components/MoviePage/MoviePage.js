@@ -35,7 +35,7 @@ class MoviePage extends Component {
                     <img src={movieDBImgSource(poster_path)} alt={original_title} />
                 </div>
                 <div className="details">
-                    <h1>Movie: {original_title}</h1>
+                    <h1>{original_title}</h1>
                     <p>{overview}</p>
                     <p>Score: {vote_average}/10</p>
                     <h3>Cast</h3>
